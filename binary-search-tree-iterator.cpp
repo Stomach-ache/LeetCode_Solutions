@@ -27,7 +27,7 @@ public:
         return ans->val;
     }
 
-    // put all nodes of the leftest path from root to leaf.
+    // put all nodes of the leftest path from $root to leaf.
     void getLeftPath(TreeNode *root) {
         while (root != NULL) {
             st.push(root);

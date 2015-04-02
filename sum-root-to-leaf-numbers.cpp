@@ -12,14 +12,14 @@ public:
     int sumNumbers(TreeNode *root) {
         if (root == NULL) return 0;
 
-        int sum = 0; // initialized to zero
+        int sum = 0; // initialized $sum to zero
         dfs(root, 0, sum);
         return sum;
     }
     void dfs(TreeNode *root, int curVal, int &sum) {
         if (root->left == NULL && root->right == NULL) {
             curVal = curVal * 10 + root->val;
-            sum += curVal; // update sum
+            sum += curVal; // update $sum
             return ;
         }
         if (root->left != NULL) dfs(root->left, curVal*10 + root->val, sum);
@@ -27,6 +27,6 @@ public:
     }
 
 private:
-    // holds the sum of all root to leaf numbers.
+    // $sum holds the sum of all root to leaf numbers.
     int sum;
 };
