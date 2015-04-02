@@ -22,3 +22,8 @@ public:
         return min(num2, num5);
     }
 };
+
+int main() {
+    Solution A;
+    cout <<
+}
